@@ -1,0 +1,21 @@
+<html>
+    <head>
+         <title>Array Traversing</title>
+         <script>
+            function getNoForIndex(){
+                let data = [12, 5, 6, 7, 10, 24, 77, 88, 90, 45, 67];
+                let x= document.getElementById('element').value;
+                if(x<data.length && typeof parseInt(x) === "number" )//validation is important
+                   document.write(`${data[x]}`);
+                else
+                   alert("array out of index or it's not an number");
+            }
+        </script>
+    </head>
+
+    <body>
+        <input type ="text" id="element"/>
+        <button onclick="getNoForIndex()">Get number</button>
+    </body>
+    
+</html>

@@ -1,0 +1,22 @@
+<script>
+    let data =[20,40,50,10,45,30];
+    let first = Number.NEGATIVE_INFINITY;
+    let second = Number.NEGATIVE_INFINITY;
+    let third = Number.NEGATIVE_INFINITY;
+
+    for(let index = 0; index<data.length; index++){
+        if(data[index] > first){ 
+            third = second;
+            second = first;
+            first = data[index];
+        } else if(data[index]>second && data[index]<first){
+            third = second;
+            second = data[index];
+        }else if (data[index]>third && data[index]<second){
+            third =data[index];
+        }
+    }
+    console.log(third);
+
+
+</script>

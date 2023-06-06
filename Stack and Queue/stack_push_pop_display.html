@@ -1,0 +1,41 @@
+<html>
+  <title>stack push pop display</title>
+  <head>
+  <script>
+    let arr = [];
+    let currentSize = arr.length;
+    let maxVal = 10;
+
+    function push(val) {
+      val = document.getElementById("newVal").value;
+      if (currentSize < maxVal) {
+        arr[currentSize] = val;
+        currentSize++;
+        console.log(`pushed ${val} successfully`);
+        document.getElementById("newVal").value="";
+      } else {
+        console.log(`exceeds max length of the stack so cannot add ${val}`);
+      }
+    }
+
+    function pop() {
+      currentSize = currentSize - 1;
+      arr.length = currentSize;
+      console.log(`Poped successfully`);
+    }
+
+    function display(){
+        document.write(arr)
+    }
+
+    console.log(arr);
+
+  </script>
+  </head>
+  <body>
+    <input type="text" id = "newVal">
+    <button onclick="push()">Push</button>
+    <button onclick="pop()">Pop</button>
+    <button onClick ="display()">Display</button>
+  </body>
+</html>

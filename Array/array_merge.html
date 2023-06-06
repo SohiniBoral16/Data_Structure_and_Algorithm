@@ -1,0 +1,24 @@
+<script>
+    // let data1 = [1,4,5,6,7,8]
+    // let data2 =[11,33,44,55,88]
+    let data1 = [1,48,5,65,47,8,78,100]
+    let data2 =[11,33,44,55,88]
+    let data3 = []
+
+    // for(let index1 = 0; index1<data1.length; index1++){
+    //     data3[index1] = data1[index1];
+    // }
+    // console.log(data3.length);
+    // for(let index2 = 0; index2<data2.length; index2++){
+    //     data3[data1.length +index2] = data2[index2];
+    // }
+    // data3.sort(function(a,b){
+    //     return a-b;
+    // })
+    // console.log(data3)
+
+    data3 = data1.concat(data2);
+    data3.sort((a,b) => a-b);
+    console.log(data3);
+
+</script>

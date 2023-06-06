@@ -1,0 +1,31 @@
+<script>
+    // let data1 = [1,48,5,65,47,8,78,100]
+    // let data2 =[11,33,44,55,88]
+
+    //it is mandatory that both the arrays should should be sorted already
+    //otherwise this approach will also fail in case of sorted merge array
+    let data1 = [1, 4, 5, 6,10,45];
+    let data2 = [3, 5, 7, 8, 9];
+    let data3 = []
+    let index1 = 0;
+    let index2 = 0;
+    let index3 = 0;
+    while(index1<data1.length && index2<data2.length){
+        if(data1[index1]<data2[index2]){
+            data3[index3] = data1[index1];
+            index1++;
+            console.log(index1)
+        }else{
+            data3[index3] = data2[index2];
+            index2++;
+            console.log(index2)
+        }
+        index3++;  
+    }
+    while(index1<data1.length){
+        data3[index3]= data1[index1];
+        index1++;
+        index3++;
+    }
+    console.log(data3);
+</script>

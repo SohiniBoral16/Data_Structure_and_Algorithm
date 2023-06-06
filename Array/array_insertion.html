@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>Array Element Insert</title>
+        <script>
+            function insertValueInPosition(){
+                let data = [12, 5, 6, 7, 10, 24, 77, 88, 90, 45, 67];
+                let newElement = document.getElementById("newEl").value;
+                let position = document.getElementById("position").value;
+                console.log(data);
+                for(let i = data.length-1; i>=0; i--){ //reverse loop
+                    //console.log(data);
+                    if(i>=position){
+                        data[i+1]=data[i];
+                        if(i == position){
+                           data[i]= newElement;
+                        }    
+                    } 
+                }
+                console.log(data);
+                document.write(data);
+            }
+        </script>
+    </head>
+    <body>
+        <input type = "text" placeholder="Enter Position" id ="position">
+        <input type = "text" placeholder="Enter Element" id ="newEl">
+
+        <button onclick="insertValueInPosition()">Insert</button>
+    </body>
+</html>
